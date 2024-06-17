@@ -27,6 +27,10 @@ train_videos
 ├── cam
 │   ├── face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
 │   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
+├── data
+│   ├── videos
+│   ├── videos
+│   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
 ├── model
 │   └── my_lstm_model.h5 : 전처리된 데이터를 학습시킨 모델
 ├── 전처리
