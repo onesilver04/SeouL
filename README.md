@@ -1,10 +1,9 @@
-## > 2024 1st Semester OpenSourceProgramming Team Project
-## > TEAM NAME : 수어 업고 튀어
+### > 2024 1st Semester OpenSourceProgramming Team Project
+### > TEAM NAME : 수어 업고 튀어
 ### > PROJECT NAME : 모두를 위한 실시간 수어-텍스트 변환 통역 서비스
 > 
-# 👪 팀원
-|이름|역할|
-|------|---|---|
+## 👪 팀원
+
 |박다은|**팀장**, UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
 |박윤서|UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
 |정채리|인공지능 모델| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
