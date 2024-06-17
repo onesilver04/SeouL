@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import ImageFont, ImageDraw, Image
 
-# 수어 단어 리스트
+# 수어 단어 리스트 5개 추출
 words = ['병원', '약국', '아파트', '학교', '유치원']
 
 # 모델 로드
@@ -22,8 +22,12 @@ font = ImageFont.truetype(fontpath, 32)
 cap = cv2.VideoCapture(0)
 
 # 손가락 관절 마디 색상 설정
-landmark_drawing_spec = mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=2, circle_radius=2)  # 노란색으로 설정
-connection_drawing_spec = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=2)  # 파란색으로 설정
+landmark_drawing_spec = mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=2, circle_radius=2)  # 관절 꼭짓점: 노란색으로 설정
+connection_drawing_spec = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=2)  # 관절 라인: 파란색으로 설정
+
+# 캠 창 크기 조정(13인치 노트북 기준 꽉 차는 화면)
+cv2.namedWindow('Sign Language Recognition', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Sign Language Recognition', 1400, 800)
 
 with mp_hands.Hands(
     max_num_hands=2,
@@ -80,7 +84,7 @@ with mp_hands.Hands(
         if predicted_word:
             image_pil = Image.fromarray(image)
             draw = ImageDraw.Draw(image_pil)
-            draw.text((10, 30), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255, 0))
+            draw.text((200, 400), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255, 0))
             image = np.array(image_pil)
 
         # 화면에 출력
