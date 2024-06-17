@@ -10,13 +10,12 @@ mp_drawing_styles = mp.solutions.drawing_styles
 # Initialize webcam
 cap = cv2.VideoCapture(0)
 
-# Initialize Face Detection and Pose Detection
+# Initialize Face Detection, Pose Detection, and Hand Detection
 with mp_face_detection.FaceDetection(
-    model_selection=0, min_detection_confidence=0.5) as face_detection, \
-    mp_pose.Pose(min_detection_confidence=0.5,
-                 min_tracking_confidence=0.5) as pose, \
-    mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.5,
-                   min_tracking_confidence=0.5) as hands:
+        model_selection=0, min_detection_confidence=0.5) as face_detection, \
+        mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose, \
+        mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.5,
+                       min_tracking_confidence=0.5) as hands:
 
     while True:
         # Capture frame-by-frame
@@ -53,12 +52,13 @@ with mp_face_detection.FaceDetection(
 
         # Draw hand landmarks and calculate distance between fingers
         if hands_results.multi_hand_landmarks:
-            for hand_landmarks in hands_results.multi_hand_landmarks:
+            for idx, hand_landmarks in enumerate(hands_results.multi_hand_landmarks):
                 finger1 = int(hand_landmarks.landmark[4].x * 100)
                 finger2 = int(hand_landmarks.landmark[8].x * 100)
                 dist = abs(finger1 - finger2)
+                text = f'Hand {idx + 1}: f1={finger1} f2={finger2} dist={dist}'
                 cv2.putText(
-                    image, text='f1=%d f2=%d dist=%d ' % (finger1, finger2, dist), org=(10, 30),
+                    image, text, org=(10, 30 + idx * 40),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1,
                     color=(255, 0, 0), thickness=3)
 
@@ -70,7 +70,7 @@ with mp_face_detection.FaceDetection(
 
         # Check for 'ESC' key press to exit
         key = cv2.waitKey(1)
-        if key == 27:  # ASCII 코드에서 'ESC' 키는 27입니다.
+        if key == 27:  # ASCII code for 'ESC' key is 27.
             break
 
 # When everything is done, release the capture and close all OpenCV windows
