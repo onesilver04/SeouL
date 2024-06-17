@@ -42,8 +42,8 @@
 
 ## 인공지능, 어떻게 사용했을까요?
 
-![image.png](https://devocean.sk.com/editorImg/2023/11/10/5b1bdd681645a18f96d7fe5d9a0fd8e0d5e9d9f663d2f7b7f2eefefab8ca685f)
-저희 팀은 Google의 MediaPipe라는 비전 AI 오픈 소스 프레임워크를 사용했어요.
+>!!!관절좌표이미지첨부!!!
+>저희 팀은 Google의 MediaPipe라는 비전 AI 오픈 소스 프레임워크를 사용했어요.
 실시간 비주얼 컴퓨팅 처리 및 해석에 매우 용이한 프레임워크에요.
 
 이 프레임워크를 활용해서 손의 21개의 관절좌표(랜드마크)를 추출했어요.
