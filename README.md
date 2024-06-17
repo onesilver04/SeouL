@@ -1,6 +1,6 @@
 ## > 2024 1st Semester OpenSourceProgramming Team Project
-# > TEAM NAME : 수어 업고 튀어
-# > PROJECT NAME : 모두를 위한 실시간 수어-텍스트 변환 통역 서비스
+## > TEAM NAME : 수어 업고 튀어
+### > PROJECT NAME : 모두를 위한 실시간 수어-텍스트 변환 통역 서비스
 > 
 # 👪 팀원
 |이름|역할|
