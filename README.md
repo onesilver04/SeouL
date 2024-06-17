@@ -28,7 +28,7 @@ train_videos
 │   ├── face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
 │   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
 ├── model
-│   └── my_lstm_model.h5 : 전처리된 데이터를 학습시키는 AI모델
+│   └── my_lstm_model.h5 : 전처리된 데이터를 학습시킨 모델
 ├── 전처리
 │   ├── changecsv.py : 원본 영상(video)데이터를 csv파일 형태로 변환시키는 코드
 │   ├── learn.py : AI 학습 모델
