@@ -2,19 +2,28 @@ import cv2
 import mediapipe as mp
 import numpy as np
 from tensorflow.keras.models import load_model
+from PIL import ImageFont, ImageDraw, Image
 
 # 수어 단어 리스트
-words = ['hospital', 'pharmacy', 'apartment', 'school', 'kindergarten']
+words = ['병원', '약국', '아파트', '학교', '유치원']
 
 # 모델 로드
-model = load_model('model/my_lstm_model.h5')
+model = load_model('my_lstm_model.h5')
 
 # MediaPipe Hands 초기화
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
+# 한글 폰트 설정
+fontpath = "C:/WINDOWS/Fonts/MALANGMALANGR.TTF"  # 사용할 한글 폰트 경로
+font = ImageFont.truetype(fontpath, 32)
+
 # 웹캠 열기
 cap = cv2.VideoCapture(0)
+
+# 손가락 관절 마디 색상 설정
+landmark_drawing_spec = mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=2, circle_radius=2)  # 노란색으로 설정
+connection_drawing_spec = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=2)  # 파란색으로 설정
 
 with mp_hands.Hands(
     max_num_hands=2,
@@ -33,6 +42,12 @@ with mp_hands.Hands(
         # 손 인식 결과 받기
         results = hands.process(image)
 
+        # 이미지를 다시 BGR로 변환 (OpenCV는 BGR을 사용)
+        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+
+        highest_confidence = 0
+        predicted_word = ""
+
         if results.multi_hand_landmarks:
             for hand_landmarks in results.multi_hand_landmarks:
                 # 손의 랜드마크 좌표를 배열로 변환
@@ -45,13 +60,28 @@ with mp_hands.Hands(
                     # 모델 예측
                     prediction = model.predict(landmarks)
                     predicted_label = np.argmax(prediction, axis=1)[0]
+                    confidence = np.max(prediction)
 
-                    # 예측 결과 출력
-                    cv2.putText(image, f'Prediction: {words[predicted_label]}', (10, 30),
-                                cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+                    # 가장 높은 확률을 가진 단어 업데이트
+                    if confidence > highest_confidence:
+                        highest_confidence = confidence
+                        predicted_word = words[predicted_label]
 
-                # 손의 랜드마크 그리기
-                mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                # 손의 랜드마크 그리기 (관절 마디는 노란색, 연결선은 파란색으로 설정)
+                mp_drawing.draw_landmarks(
+                    image, 
+                    hand_landmarks, 
+                    mp_hands.HAND_CONNECTIONS, 
+                    landmark_drawing_spec,
+                    connection_drawing_spec
+                )
+
+        # 가장 높은 확률을 가진 단어 출력
+        if predicted_word:
+            image_pil = Image.fromarray(image)
+            draw = ImageDraw.Draw(image_pil)
+            draw.text((10, 30), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255, 0))
+            image = np.array(image_pil)
 
         # 화면에 출력
         cv2.imshow('Sign Language Recognition', image)
