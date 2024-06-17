@@ -4,10 +4,13 @@
 > 
 ## 👪 팀원
 
-|박다은|**팀장**, UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
-|박윤서|UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
-|정채리|인공지능 모델| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
-|한은정|웹캠 | <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
+>|박다은|**팀장**, UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
+>
+>|박윤서|UI| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
+>
+>|정채리|인공지능 모델| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
+>
+>|한은정|웹캠| <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white"/></a> |
 
 
 ***
