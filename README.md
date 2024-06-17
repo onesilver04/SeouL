@@ -48,6 +48,14 @@ train_videos
 그 후, 저희는 학습 데이터를 처리했어요. 길을 물어보거나 방향 등을 농인분들이 설명하기 쉬우려면 큰 건물들이 주로 사용될 것을 예상하고
 (병원, 약국, 아파트, 학교, 유치원) 총 5가지의 수화에 대해 학습했어요.
 
+## Requirements
+* Anaconda 가상환경 활성화
+* Install google mediapipe:
+  ```shell
+  pip install mediapipe opencv-python
+  ```
+* python version은 3.9가 적당함
+  
 # SeouL 데모
 
 !!!실행결과 동영상 or 사진 첨부!!!
