@@ -22,27 +22,21 @@
 
 ## Github 구조
 
->cam
->
->    |____face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
->
->    |
->
->    |____only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
->
->model
->
->    |____my_lstm_model.h5 : 전처리된 데이터를 학습시키는 AI모델
->
->전처리
->
->    |____changecsv.py : 원본 영상(video)데이터를 csv파일 형태로 변환시키는 코드
->    |____learn.py : AI 학습 모델
->    |____processed.py : csv형태의 파일을 npy형태로 변환시켜 라벨링 하는 코드
->
->image.py : 학습된 모델을 가지고 캠을 띄우는 코드
-
-
+├── cam
+│   ├── face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
+│   ├── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
+├── model
+│   ├── my_lstm_model.h5 : 전처리된 데이터를 학습시키는 AI모델
+│   ├── 053_003_002.mp4
+│   ├── 053_003_003.mp4
+│   └── 053_003_004.mp4
+├── 전처리리
+│   ├── changecsv.py : 원본 영상(video)데이터를 csv파일 형태로 변환시키는 코드
+│   ├── learn.py : AI 학습 모델
+│   ├── processed.py : csv형태의 파일을 npy형태로 변환시켜 라벨링 하는 코드
+│   └── 024_003_004.mp4
+└── image.py : 학습된 모델을 가지고 캠을 띄우는 코드
+    
 ## 인공지능, 어떻게 사용했을까요?
 
 >![Google Mediapipe](https://github.com/onesilver04/SeouL/assets/141193305/bb47481d-3ddf-43c0-905b-2a710dcf3e23)
