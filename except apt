@@ -26,7 +26,7 @@ cap = cv2.VideoCapture(0)
 landmark_drawing_spec = mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=2, circle_radius=2)  # 관절 꼭짓점: 노란색으로 설정
 connection_drawing_spec = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=2)  # 관절 라인: 파란색으로 설정
 
-# 캠 창 크기 조정(13인치 노트북 기준 꽉 차는 화면)
+# 캠 창 크기 조정
 cv2.namedWindow('Sign Language Recognition', cv2.WINDOW_NORMAL)
 cv2.resizeWindow('Sign Language Recognition', 1200, 600)
 
@@ -83,6 +83,9 @@ with mp_hands.Hands(
                 prediction = model.predict(avg_landmarks)
                 predicted_label = np.argmax(prediction, axis=1)[0]
                 predicted_word = words[predicted_label]
+            else:
+                # 예측할 데이터가 없으면 빈 문자열로 설정
+                predicted_word = ""
 
             # 다음 예측을 위해 초기화
             landmark_history = []
@@ -92,7 +95,7 @@ with mp_hands.Hands(
         if predicted_word:
             image_pil = Image.fromarray(image)
             draw = ImageDraw.Draw(image_pil)
-            draw.text((200, 400), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255, 0))
+            draw.text((200, 400), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255))
             image = np.array(image_pil)
 
         # 화면에 출력
