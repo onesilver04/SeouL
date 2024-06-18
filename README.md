@@ -26,7 +26,7 @@
 ├── cam
 │   ├── face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
 │   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
-├── data병원, 약국, 아파트, 학교, 유치원
+├── data
 │   ├── hospital.avi : 각 단어별로 10개씩의 동영상 데이터 존재
 │   ├── pharmacy.avi
 │   ├── apt.avi
