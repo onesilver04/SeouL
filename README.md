@@ -9,8 +9,8 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
   - [팀원&역할분담](#팀원&역할분담)
   - [Project 구조](#Project-구조)
   - [Requirements](#Requirements)
-  - [SeouL 데모](#SeouL-데모)
   - [Help](#Help)
+  - [SeouL 데모](#SeouL-데모)
 
 ## 개요
 - 프로젝트 이름: 모두를 위한 실시간 수어-텍스트 변환 통역 서비스(SeouL) 🚌
@@ -68,19 +68,34 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 
 ## Requirements
 * Anaconda 가상환경 활성화
-* Install google mediapipe:
-  ```shell
-  pip install mediapipe opencv-python
-  ```
-* python version = 3.9
-* Install 'flask' for UI:
-  ```shell
-  pip install flask
-  ```
-  
-# SeouL 데모
+  * Install google mediapipe:
+    ```shell
+    pip install mediapipe opencv-python
+    ```
+  * python version = 3.9
+  * Install 'flask' for UI:
+    ```shell
+    pip install flask
+    ```
+    
+* SeouL/UI/sign_proj/app의 모든 파일을 한 공간 안에 다운로드해야 합니다.
+* templates 폴더 안의 소스코드들은 한 폴더에 따로 묶어둬야 합니다.
 
-!!!실행결과 동영상 or 사진 첨부!!!
+* Anaconda 에서 main.py를 실행시킵니다.
+    ```shell
+    python main.py
+    ```
+
+* 메세지가 뜨면 url을 입력할 수 있는 인터넷을 연결합니다.
+    ```shell
+    Serving Flask app 'main_수정'
+    Debug mode: off
+    ```
+
+* 해당 url link를 입력한 뒤 실행시켜 보세요!
+    ```shell
+    http://localhost:8080/
+    ```
 
 ## Help
 
@@ -91,3 +106,7 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 
 길을 물어보거나 방향 등을 농인분들이 설명하기 쉬우려면 큰 건물들이 주로 사용될 것을 예상하고
 (병원, 약국, 아파트, 학교, 유치원) 총 5가지의 수화에 대해 학습시켰습니다.
+
+# SeouL 데모
+
+!!!실행결과 동영상 or 사진 첨부!!!
