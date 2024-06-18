@@ -45,8 +45,13 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   ├── changecsv.py
 │   ├── learn.py
 │   └── processed.py
-└── image.py
-
+├── image.py
+└── UI
+    ├── index.html
+    ├── styles.css
+    ├── scripts.js
+    ├── figma first page.png
+    └── app.py
 ```
 
 ## Requirements
