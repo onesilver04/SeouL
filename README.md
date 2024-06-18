@@ -61,7 +61,10 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
   pip install mediapipe opencv-python
   ```
 * python version = 3.9
-* [![python](https://code.visualstudio.com/)
+* Install 'flask' for UI:
+  ```shell
+  pip install flask
+  ```
   
 # SeouL 데모
 
