@@ -23,7 +23,7 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 >
 >  |정채리|인공지능 모델|
 >
->  |한은정|mediapipe&웹캠|
+>  |한은정|mediapipe&웹캠구성|
 
 ***
 
@@ -46,12 +46,24 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   ├── learn.py
 │   └── processed.py
 ├── image.py
+├── learn.py
+├── except apt.py
 └── UI
-    ├── index.html
-    ├── styles.css
-    ├── scripts.js
+    ├── index.html ??? app폴더에 있는 거랑 똑같은거야??? 지워도 돼???
+    ├── styles.css ???
+    ├── scripts.js ???
     ├── figma first page.png
-    └── app.py
+    └── sign_proj
+        └── app
+            ├── static
+            |   ├── styles.css
+            |   └── scripts.js
+            ├── templates
+            |   ├── about.html
+            |   ├── index.html
+            |   └── sign_language.html
+            ├── main.py
+            └── my_lstm_model.h5 ???
 ```
 
 ## Requirements
