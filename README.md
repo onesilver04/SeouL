@@ -23,14 +23,15 @@
 ## Github 구조
 
 ```
-train_videos
 ├── cam
 │   ├── face+body+2hands : 표정, 전신, 두 손을 인식해서 캠에 관절들을 띄우는 코드
 │   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
-├── data
-│   ├── videos
-│   ├── videos
-│   └── only 2hands(blue, yellow) : 두 손의 관절들을 인식해서 캠에 띄우는 코드
+├── data병원, 약국, 아파트, 학교, 유치원
+│   ├── hospital.avi : 각 단어별로 10개씩의 동영상 데이터 존재
+│   ├── pharmacy.avi
+│   ├── apt.avi
+│   ├── school.avi
+│   └── kindergarten.avi
 ├── model
 │   └── my_lstm_model.h5 : 전처리된 데이터를 학습시킨 모델
 ├── 전처리
@@ -44,13 +45,11 @@ train_videos
 
 >![Google Mediapipe](https://github.com/onesilver04/SeouL/assets/141193305/bb47481d-3ddf-43c0-905b-2a710dcf3e23)
 >
->저희 팀은 Google의 MediaPipe라는 비전 AI 오픈 소스 프레임워크를 사용했어요.
-실시간 비주얼 컴퓨팅 처리 및 해석에 매우 용이한 프레임워크에요.
+>저희 팀은 Google의 MediaPipe라는 비전 AI 오픈 소스 프레임워크를 사용했습니다.
+(실시간 비주얼 컴퓨팅 처리 및 해석에 매우 용이)
 
-이 프레임워크를 활용해서 손의 21개의 관절좌표(랜드마크)를 추출했어요.
-
-그 후, 저희는 학습 데이터를 처리했어요. 길을 물어보거나 방향 등을 농인분들이 설명하기 쉬우려면 큰 건물들이 주로 사용될 것을 예상하고
-(병원, 약국, 아파트, 학교, 유치원) 총 5가지의 수화에 대해 학습했어요.
+길을 물어보거나 방향 등을 농인분들이 설명하기 쉬우려면 큰 건물들이 주로 사용될 것을 예상하고
+(병원, 약국, 아파트, 학교, 유치원) 총 5가지의 수화에 대해 학습시켰습니다.
 
 ## Requirements
 * Anaconda 가상환경 활성화
