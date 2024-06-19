@@ -51,18 +51,17 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   ├── csvmerged.py
 │   └── processed
 ├── final.py
-└── UI
-    ├── static
-    |   ├── figma first page.png
-    |   ├── styles.css
-    |   └── scripts.js
-    ├── templates
-    |   ├── about.html
-    |   ├── index.html
-    |   └── sign_language.html
+└── UI/sign_proj
     ├── main.py
-    ├── my_lstm_model_15.h5
-    └── my_lstm_model.h5
+    └── app
+        ├── static
+        |   ├── figma first page.png
+        |   ├── styles.css
+        |   └── scripts.js
+        └── templates
+            ├── about.html
+            ├── index.html
+            └── sign_language.html
 ```
 
 ## Requirements
