@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Sign Language Recognition</h1>
-    <div class="video-container">
-        <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video Feed">
-    </div>
-    <a href="/">Back to Home</a>
+    <header>
+        <h1>Sign Language Recognition</h1>
+    </header>
+    <main>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video Feed">
+        </div>
+        <a href="/">Back to Home</a>
+    </main>
 </body>
 </html>
