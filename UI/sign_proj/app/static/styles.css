@@ -113,8 +113,8 @@ main {
 }
 
 .video-feed {
-  width: 800px;
-  height: 600px;
+  width: 1600px;
+  height: 1200px;
   border: 2px solid #000; /* 검정색 테두리 */
   object-fit: cover;
 }
