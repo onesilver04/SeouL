@@ -89,10 +89,9 @@ with mp_hands.Hands(
                 predicted_label = np.argmax(prediction, axis=1)[0]
                 confidence = prediction[0][predicted_label]
 
-                # 아파트인 경우 model_15의 예측 사용
-                if predicted_label_15 == words.index('아파트'):
+                if predicted_label_15 == words.index('아파트'):  # 아파트인 경우 model_15의 예측 사용
                     predicted_word = words[predicted_label_15]
-                elif predicted_label == words.index('학교'):
+                elif predicted_label == words.index('학교'):  # 학교인 경우 model의 예측 사용
                     predicted_word = words[predicted_label]
                 else:
                     # 정확도가 높은 예측을 선택
