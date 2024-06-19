@@ -40,14 +40,13 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   ├── school.avi
 │   └── kindergarten.avi
 ├── model
+|   ├── learn.py
+|   ├── my_lstm_model15.h5
 │   └── my_lstm_model.h5
 ├── 전처리
 │   ├── changecsv.py
 │   ├── learn.py
 │   └── processed.py
-├── image.py
-├── learn.py
-├── except apt.py
 └── UI
     ├── index.html ??? app폴더에 있는 거랑 똑같은거야??? 지워도 돼???
     ├── styles.css ???
