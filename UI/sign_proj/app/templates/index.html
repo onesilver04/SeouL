@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Language Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
     <main>
         <div class="page active">
             <div class="image-container">
-                <img src="{{ url_for('static', filename='figma_first_page.png') }}" alt="Your Photo" id="main-photo">
+                <img src="/static/figma first page.png" alt="Your Photo" id="main-photo">
                 <div class="page1-buttons">
                     <a href="/sign_language"><button>Start</button></a>
                     <a href="/about"><button>About</button></a>
@@ -21,5 +21,8 @@
             </div>
         </div>
     </main>
+
+    <!-- Script 추가: script.js 파일을 로드하여 start 버튼 클릭 시 수어 변환 페이지로 이동하도록 설정 -->
+    <script src="/static/script.js"></script>
 </body>
 </html>
