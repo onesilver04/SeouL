@@ -41,20 +41,24 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   └── kindergarten.avi 또는 .mp4
 ├── model
 |   ├── learn.py
-|   ├── my_lstm_model15.h5
+|   ├── my_lstm_model_15.h5
 │   └── my_lstm_model.h5
+├── result
+|   ├── UI_result.zip
+|   └── cam_result.mp4
 ├── 전처리
 │   ├── changecsv.py
 │   ├── csvmerged.py
-│   └── processed.py
+│   └── processed
+├── final.py
 └── UI
-    ├── index.html ??? app폴더에 있는 거랑 똑같은거야??? 지워도 돼???
-    ├── styles.css ???
-    ├── scripts.js ???
-    ├── figma first page.png
+    ├── index.html 
+    ├── styles.css
+    ├── scripts.js
     └── sign_proj
         └── app
             ├── static
+            |   ├── figma first page.png
             |   ├── styles.css
             |   └── scripts.js
             ├── templates
@@ -62,7 +66,8 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
             |   ├── index.html
             |   └── sign_language.html
             ├── main.py
-            └── my_lstm_model.h5 ???
+            ├── my_lstm_model_15.h5
+            └── my_lstm_model.h5
 ```
 
 ## Requirements
@@ -87,8 +92,8 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 
 * 메세지가 뜨면 url을 입력할 수 있는 인터넷을 연결합니다.
     ```shell
-    Serving Flask app 'main_수정'
-    Debug mode: off
+    Serving Flask app 'main'
+    ...(생략)
     ```
 
 ## Help
@@ -103,8 +108,5 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 
 # SeouL 데모
 
-!!!실행결과 동영상 or 사진 첨부!!!
-* lstm + mediapipe 연결 영상
-* 최종 완성본 영상
-
-* 
+lstm + mediapipe 연결 영상 & UI까지 연결한 최종 완성본 영상
+여기에-->[ move to the file] (https://github.com/onesilver04/SeouL/tree/main/result)
