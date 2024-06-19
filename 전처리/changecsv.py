@@ -46,6 +46,6 @@ def extract_hand_landmarks(video_path, output_csv_path):
 
 # 사용 예시
 video_path = 'school6.avi'  # 동영상 파일 경로를 지정하세요.
-output_csv_path = 'hand_landmarks/hospital_6.csv'  # 저장할 CSV 파일 경로를 지정하세요.
+output_csv_path = 'hand_landmarks/school_6.csv'  # 저장할 CSV 파일 경로를 지정하세요.
 extract_hand_landmarks(video_path, output_csv_path)
 
