@@ -45,7 +45,7 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   └── my_lstm_model.h5
 ├── 전처리
 │   ├── changecsv.py
-│   ├── learn.py
+│   ├── csvmerged.py
 │   └── processed.py
 └── UI
     ├── index.html ??? app폴더에 있는 거랑 똑같은거야??? 지워도 돼???
