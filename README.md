@@ -108,5 +108,5 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 
 # SeouL 데모
 
-lstm + mediapipe 연결 영상 & UI까지 연결한 최종 완성본 영상
-여기에-->[ move to the file] (https://github.com/onesilver04/SeouL/tree/main/result)
+💽LSTM + mediapipe 연결 영상 & UI까지 연결한 최종 완성본 영상🎬
+[move to the file] (https://github.com/onesilver04/SeouL/tree/main/result)
