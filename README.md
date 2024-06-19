@@ -34,11 +34,11 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   ├── face+body+2hands
 │   └── only 2hands(blue, yellow)
 ├── data
-│   ├── hospital.avi
-│   ├── pharmacy.avi
-│   ├── apt.avi
-│   ├── school.avi
-│   └── kindergarten.avi
+│   ├── hospital.avi 또는 .mp4
+│   ├── pharmacy.avi 또는 .mp4
+│   ├── apt.avi 또는 .mp4
+│   ├── school.avi 또는 .mp4
+│   └── kindergarten.avi 또는 .mp4
 ├── model
 |   ├── learn.py
 |   ├── my_lstm_model15.h5
