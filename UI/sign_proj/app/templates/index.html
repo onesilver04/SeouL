@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Welcome to Sign Language Converter</h1>
-    <a href="/sign_language">Start</a>
-    <a href="/about">About</a>
+    <header>
+        <h1>Welcome to Sign Language Converter</h1>
+    </header>
+    <main>
+        <div class="page active">
+            <div class="image-container">
+                <img id="main-photo" src="figma first page.png" alt="Main Photo">
+                <div class="page1-buttons">
+                    <a href="/sign_language"><button>Start</button></a>
+                    <a href="/about"><button>About</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Script 추가: script.js 파일을 로드하여 start 버튼 클릭 시 수어 변환 페이지로 이동하도록 설정 -->
     <script src="/static/script.js"></script>
