@@ -9,8 +9,8 @@ import time
 words = ['병원', '유치원', '약국', '아파트', '학교']
 
 # 모델 로드
-model_15 = load_model('model/my_lstm_model_15.h5')
-model = load_model('model/my_lstm_model.h5')
+model_15 = load_model('model/my_lstm_model_15.h5') # 경로 설정 주의
+model = load_model('model/my_lstm_model.h5') # 경로 설정 주의
 
 # MediaPipe Hands 초기화
 mp_drawing = mp.solutions.drawing_utils
@@ -26,14 +26,12 @@ cap = cv2.VideoCapture(0)
 # 손가락 관절 마디 색상 설정
 landmark_drawing_spec = mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=2, circle_radius=2)  # 관절 꼭짓점: 노란색으로 설정
 connection_drawing_spec = mp_drawing.DrawingSpec(color=(255, 0, 0), thickness=2)  # 관절 라인: 파란색으로 설정
-
-# 캠 창 크기 조정(13인치 노트북 기준 꽉 차는 화면)
 cv2.namedWindow('Sign Language Recognition', cv2.WINDOW_NORMAL)
-cv2.resizeWindow('Sign Language Recognition', 1200, 600)
+cv2.resizeWindow('Sign Language Recognition', 1200, 600) # 캠 창 크기 조절
 
 # 초기 변수 설정
 landmark_history = []
-capture_duration = 1  # 데이터 수집 시간 (초)
+capture_duration = 1  # 예측 단어 뜨는 시간 조정
 last_capture_time = time.time()
 predicted_word = ""  # 마지막으로 예측된 단어
 
@@ -111,7 +109,7 @@ with mp_hands.Hands(
         if predicted_word:
             image_pil = Image.fromarray(image)
             draw = ImageDraw.Draw(image_pil)
-            draw.text((200, 400), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255, 0))
+            draw.text((200, 400), f'Prediction: {predicted_word}', font=font, fill=(255, 255, 255))
             image = np.array(image_pil)
 
         # 화면에 출력
@@ -124,5 +122,3 @@ with mp_hands.Hands(
 # 자원 해제
 cap.release()
 cv2.destroyAllWindows()
-
-
