@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Language Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Sign Language Recognition</h1>
-    </header>
-    <main>
-        <div class="video-container">
-            <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video Feed">
-        </div>
-        <a href="/">Back to Home</a>
-    </main>
+    <h1>Sign Language Recognition</h1>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video Feed">
+    </div>
+    <a href="/">Back to Home</a>
 </body>
 </html>
