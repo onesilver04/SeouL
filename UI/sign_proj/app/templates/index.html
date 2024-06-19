@@ -8,13 +8,18 @@
 </head>
 <body>
     <header>
-        <h1>Sign Language Recognition</h1>
+        <h1>Welcome to Sign Language Converter</h1>
     </header>
     <main>
-        <div class="video-container">
-            <img src="{{ url_for('video_feed') }}" class="video-feed" alt="Video Feed">
+        <div class="page active">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='figma_first_page.png') }}" alt="Your Photo" id="main-photo">
+                <div class="page1-buttons">
+                    <a href="/sign_language"><button>Start</button></a>
+                    <a href="/about"><button>About</button></a>
+                </div>
+            </div>
         </div>
-        <a href="/">Back to Home</a>
     </main>
 </body>
 </html>
