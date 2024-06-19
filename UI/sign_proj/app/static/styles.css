@@ -37,7 +37,6 @@ main {
   object-fit: cover; /* 이미지가 데스크탑을 벗어나지 않도록 설정 */
 }
 
-/* 첫 번째 페이지 버튼 스타일 */
 .page1-buttons {
   position: absolute;
   top: 47%; /* 버튼 위치 조정 - 수직 중앙 */
@@ -63,13 +62,11 @@ main {
   letter-spacing: 10px; /* 글자 사이 간격 넓히기 */
 }
 
-/* 두 번째 페이지 줄글들의 스타일 */
 .page:nth-child(2) p {
   font-family: 'Spoqa Han Sans', sans-serif; /* 귀여운 글꼴 설정 */
   font-size: 30px; /* 글자 크기 키우기 */
 }
 
-/* 두 번째 페이지 제목 스타일 */
 .page:nth-child(2) h1 {
   font-family: 'Comic Sans MS', cursive; /* 귀여운 글꼴 설정 */
   font-size: 36px; /* 제목 글자 크기 키우기 */
@@ -78,7 +75,6 @@ main {
   margin-bottom: 20px; /* 아래 여백 설정 */
 }
 
-/* 두 번째 페이지 버튼 스타일 */
 .page2-buttons {
   background-color: #0f2ad8; /* 버튼 배경색 설정 */
   border: 2px solid #eff620; /* 버튼 테두리 설정 */
@@ -89,7 +85,6 @@ main {
   cursor: pointer;
 }
 
-/* 세 번째 페이지 버튼 스타일 */
 .page3-buttons {
   margin: 15px; /* 버튼 사이의 거리 */
   padding: 12px 25px; /* 버튼 크기 */
@@ -97,7 +92,6 @@ main {
   cursor: pointer;
 }
 
-/* 네 번째 페이지 버튼 스타일 */
 .page4-buttons {
   margin: 25px; /* 버튼 사이의 거리 */
   padding: 20px 40px; /* 버튼 크기 */
