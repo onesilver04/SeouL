@@ -91,11 +91,6 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
     Debug mode: off
     ```
 
-* 해당 url link를 입력한 뒤 실행시켜 보세요!
-    ```shell
-    http://localhost:8080/
-    ```
-
 ## Help
 
 >![Google Mediapipe](https://github.com/onesilver04/SeouL/assets/141193305/bb47481d-3ddf-43c0-905b-2a710dcf3e23)
