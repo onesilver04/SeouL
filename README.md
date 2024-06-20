@@ -45,7 +45,8 @@ Sign Language(수어) 앞의 두 철자인 S, L을 따서 대한민국의 수도
 │   └── my_lstm_model.h5
 ├── result
 |   ├── UI_result.zip
-|   └── cam_result.mp4
+|   ├── cam_result_success.mp4
+|   └── cam_result_failure.mp4
 ├── 전처리
 │   ├── changecsv.py
 │   ├── csvmerged.py
